@@ -13,7 +13,7 @@ A conversational web application that uses Google Gemini and the Model Context P
 
 ## Architecture
 
-The project contains two components:
+The project contains 2 components:
 
 - **Frontend MCP Client** – provides the web interface and sends user questions to the AI service.
 - **Backend MCP Server** – exposes tools through a JSON-RPC endpoint and connects to JSON Server, GraphQL, and RDF4J.
