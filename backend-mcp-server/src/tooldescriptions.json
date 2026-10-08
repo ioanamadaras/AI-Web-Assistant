@@ -1,0 +1,122 @@
+[
+  {
+    "name": "getLaureatesByNationality",
+    "summary": "Cauta laureati dupa nationalitate.",
+    "description": "Nationalitatea laureatului, folosind forma de adjectiv in limba engleza (ex: 'Swiss', 'French', 'Dutch'). NU folosi numele tarii (ex: 'Switzerland').",
+    "params": [
+      {
+        "name": "nationality",
+        "description": "Numele nationalitatii laureatului, in limba engleza.",
+        "required": true,
+        "schema": { "type": "string" }
+      }
+    ]
+  },
+  {
+    "name": "addEvent",
+    "summary": "Adauga un premiu (eveniment) nou.",
+    "description": "Adauga un nou eveniment (premiu Nobel) in baza de date JSON-Server. Nu necesita ID, acesta este generat automat.",
+    "params": [
+      {
+        "name": "name",
+        "description": "Numele premiului (ex: 'Nobel Prize in Literature').",
+        "required": true,
+        "schema": { "type": "string" }
+      },
+      
+      {
+        "name": "startDate",
+        "description": "Anul sau data la care s-a acordat premiul (ex: '1901').",
+        "required": false,
+        "schema": { "type": "string" }
+      },
+
+      {
+        "name": "location",
+        "description": "Orasul in care s-a acordat premiul (ex: 'Stockholm').",
+        "required": false,
+        "schema": { "type": "string" }
+      }
+    ]
+  },
+  {
+    "name": "getScientistsByInstitution",
+    "summary": "Cauta cercetatori dupa institutie.",
+    "description": "Cauta cercetatorii afiliati unei institutii specifice folosind un server GraphQL.",
+    "params": [
+      {
+        "name": "institutionName",
+        "description": "Cuvantul cheie principal care identifica institutia, FARA termeni generici precum 'University', 'Institute', 'Academy' etc. (ex: trimite doar 'Cambridge' in loc de 'University of Cambridge', sau doar 'Pasteur').",
+        "required": true,
+        "schema": { "type": "string" }
+      }
+    ]
+  },
+  {
+    "name": "addInstitution",
+    "summary": "Adauga o institutie academica noua.",
+    "description": "Adauga o institutie academica noua in baza de date GraphQL.",
+    "params": [
+      {
+        "name": "name",
+        "description": "Numele complet al institutiei (ex: 'Oxford University').",
+        "required": true,
+        "schema": { "type": "string" }
+      },
+
+      {
+        "name": "country",
+        "description": "Tara in care se afla institutia.",
+        "required": false,
+        "schema": { "type": "string" }
+      },
+
+      {
+        "name": "foundedYear",
+        "description": "Anul infiintarii institutiei (ex: 1096).",
+        "required": false,
+        "schema": { "type": "number" }
+      }
+    ]
+  },
+  {
+    "name": "getArticlesByJournal",
+    "summary": "Gaseste articole dintr-un jurnal.",
+    "description": "Executa o interogare SPARQL SELECT in baza de date RDF4J pentru a gasi articolele stiintifice publicate intr-un anumit jurnal.",
+    "params": [
+      {
+        "name": "journalName",
+        "description": "Numele jurnalului stiintific (ex: 'The Lancet').",
+        "required": true,
+        "schema": { "type": "string" }
+      }
+    ]
+  },
+  {
+    "name": "addJournal",
+    "summary": "Adauga un jurnal stiintific nou.",
+    "description": "Executa o mutatie SPARQL INSERT DATA pentru a adauga un nou jurnal (schema:Periodical) in baza de date RDF4J.",
+    "params": [
+      {
+        "name": "name",
+        "description": "Numele jurnalului stiintific (ex: 'The Lancet').",
+        "required": true,
+        "schema": { "type": "string" }
+      },
+
+      {
+        "name": "issn",
+        "description": "Codul ISSN al jurnalului (ex: '0140-6736').",
+        "required": false,
+        "schema": { "type": "string" }
+      },
+
+      {
+        "name": "publisherId",
+        "description": "ID-ul intern al editurii care publica jurnalul (ex: 'Publisher_Nature', 'Publisher_AAAS').",
+        "required": false,
+        "schema": { "type": "string" }
+      }
+    ]
+  }
+]

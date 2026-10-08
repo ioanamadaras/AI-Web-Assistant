@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Premii Nobel - Web Semantic MCP</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <h1>Premii Nobel - Web Semantic</h1>
+
+            <div class="flex">
+                <section class="card">
+                    <h2>Query</h2>
+                    <textarea
+                        id="question"
+                        placeholder="Ex: Afișează laureații Premiului Nobel pentru Pace din 1901"
+                    ></textarea>
+                    <button id="askBtn">Send</button>
+                </section>
+                <section class="card">
+                    <h2>Result:</h2>
+                    <pre id="answer"></pre>
+                </section>
+            </div>
+
+           <div class="examples">
+                <h2>Exemple de întrebări</h2>
+
+                <div class="example">
+                    <b>METHOD: getLaureatesByNationality</b>
+                    <p>Afișează laureații Nobel cu nationality Swiss</p>
+                </div>
+
+                <div class="example">
+                    <b>METHOD: addEvent</b>
+                    <p>Adaugă premiul Nobel Prize in Physics cu start date 1901 și locația Stockholm</p>
+                </div>
+
+                <div class="example">
+                    <b>METHOD: getScientistsByInstitution</b>
+                    <p>Arată cercetătorii afiliați instituției cu denumirea Cambridge</p>
+                </div>
+
+                <div class="example">
+                    <b>METHOD: addInstitution</b>
+                    <p>Adaugă Oxford University, infintata in 1096 in Anglia</p>
+                </div>
+
+                <div class="example">
+                    <b>METHOD: getArticlesByJournal</b>
+                    <p>Afișează articolele publicate în Nature</p>
+                </div>
+
+                <div class="example">
+                    <b>METHOD: addJournal</b>
+                    <p>Adaugă un jurnal nou `The Lancet`, issn 1234-1234 si publisher Publisher_AAAS</p>
+                </div>
+            </div>
+
+            <footer>
+                <p class="subtitle">
+                    Frontend:
+                    <a target="_blank" href="http://localhost:5000">5000</a>
+                    <br />JSON:
+                    <a target="_blank" href="http://localhost:4000">4000</a>
+                    <br />GraphQL:
+                    <a target="_blank" href="http://localhost:3000">3000</a>
+                    <br />MCP/RDF tool router:
+                    <a target="_blank" href="http://localhost:5001">5001</a>
+                    <br />RDF:
+                    <a target="_blank" href="http://localhost:8080">8080</a>
+                </p>
+            </footer>
+        </main>
+
+        <script src="app.js"></script>
+    </body>
+</html>

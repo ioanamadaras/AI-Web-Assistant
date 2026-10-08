@@ -1,0 +1,115 @@
+@prefix schema: <https://schema.org/> .
+@prefix ex: <http://example.org/research/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Definim persoanele (pentru schema:author)
+ex:Scientist_6 a schema:Person ; schema:name "Marie Curie" .
+ex:Scientist_162 a schema:Person ; schema:name "Svante Arrhenius" .
+ex:Scientist_2 a schema:Person ; schema:name "Hendrik A. Lorentz" .
+ex:Scientist_4 a schema:Person ; schema:name "Henri Becquerel" .
+ex:Scientist_5 a schema:Person ; schema:name "Pierre Curie" .
+ex:Scientist_3 a schema:Person ; schema:name "Pieter Zeeman" .
+ex:Scientist_463 a schema:Person ; schema:name "Frédéric Passy" .
+ex:Scientist_462 a schema:Person ; schema:name "Henry Dunant" .
+
+# Definim editurile (pentru schema:publisher)
+ex:Publisher_Nature a schema:Organization ; schema:name "Nature Portfolio" .
+ex:Publisher_AAAS a schema:Organization ; schema:name "AAAS" .
+ex:Publisher_Wiley a schema:Organization ; schema:name "Wiley-VCH" .
+ex:Publisher_Academie a schema:Organization ; schema:name "Académie des Sciences" .
+ex:Publisher_Taylor a schema:Organization ; schema:name "Taylor & Francis" .
+ex:Publisher_Guillaumin a schema:Organization ; schema:name "Guillaumin et Cie" .
+ex:Publisher_ICRC a schema:Organization ; schema:name "ICRC" .
+
+
+# Tabelul 1: Jurnale stiintifice (Entitatea One)
+ex:Journal_1 a schema:Periodical ;
+    schema:name "Nature" ;
+    schema:issn "0028-0836" ;
+    schema:publisher ex:Publisher_Nature . # Acum pointeaza corect spre o Organization
+
+ex:Journal_2 a schema:Periodical ;
+    schema:name "Science" ;
+    schema:issn "0036-8075" ;
+    schema:publisher ex:Publisher_AAAS .
+
+ex:Journal_3 a schema:Periodical ;
+    schema:name "Annalen der Physik" ;
+    schema:issn "0003-3804" ;
+    schema:publisher ex:Publisher_Wiley .
+
+ex:Journal_4 a schema:Periodical ;
+    schema:name "Comptes rendus de l'Académie des Sciences" ;
+    schema:issn "0001-4036" ;
+    schema:publisher ex:Publisher_Academie .
+
+ex:Journal_5 a schema:Periodical ;
+    schema:name "Philosophical Magazine" ;
+    schema:issn "1478-6435" ;
+    schema:publisher ex:Publisher_Taylor .
+
+ex:Journal_6 a schema:Periodical ;
+    schema:name "Journal des Économistes" ;
+    schema:issn "1149-2368" ;
+    schema:publisher ex:Publisher_Guillaumin .
+
+ex:Journal_7 a schema:Periodical ;
+    schema:name "Bulletin international des sociétés de la Croix-Rouge" ;
+    schema:issn "1816-9836" ;
+    schema:publisher ex:Publisher_ICRC .
+
+
+# Tabelul 2: Articole stiintifice si publicatii (Entitatea Many)
+ex:Article_1 a schema:ScholarlyArticle ;
+    schema:name "Radioactive Substances" ;
+    schema:datePublished "1903-06-01"^^xsd:date ;
+    schema:author ex:Scientist_6 ; 
+    schema:isPartOf ex:Journal_1 . 
+
+ex:Article_2 a schema:ScholarlyArticle ;
+    schema:name "On the Influence of Carbonic Acid in the Air" ;
+    schema:datePublished "1896-04-01"^^xsd:date ;
+    schema:author ex:Scientist_162 ;
+    schema:isPartOf ex:Journal_2 .
+
+ex:Article_3 a schema:ScholarlyArticle ;
+    schema:name "Electromagnetic phenomena" ;
+    schema:datePublished "1904-01-01"^^xsd:date ;
+    schema:author ex:Scientist_2 ;
+    schema:isPartOf ex:Journal_3 .
+
+ex:Article_4 a schema:ScholarlyArticle ;
+    schema:name "The Discovery of Radium" ;
+    schema:datePublished "1898-12-26"^^xsd:date ;
+    schema:author ex:Scientist_6 ;
+    schema:isPartOf ex:Journal_1 .
+
+ex:Article_5 a schema:ScholarlyArticle ;
+    schema:name "Sur les radiations émises par phosphorescence" ;
+    schema:datePublished "1896-02-24"^^xsd:date ;
+    schema:author ex:Scientist_4 ;
+    schema:isPartOf ex:Journal_4 .
+
+ex:Article_6 a schema:ScholarlyArticle ;
+    schema:name "Propriétés magnétiques des corps à diverses températures" ;
+    schema:datePublished "1895-07-25"^^xsd:date ;
+    schema:author ex:Scientist_5 ;
+    schema:isPartOf ex:Journal_4 .
+
+ex:Article_7 a schema:ScholarlyArticle ;
+    schema:name "On the Influence of Magnetism on the Nature of the Light emitted by a Substance" ;
+    schema:datePublished "1897-03-01"^^xsd:date ;
+    schema:author ex:Scientist_3 ;
+    schema:isPartOf ex:Journal_5 .
+
+ex:Article_8 a schema:ScholarlyArticle ;
+    schema:name "De la Paix et de ses partisans" ;
+    schema:datePublished "1867-05-15"^^xsd:date ;
+    schema:author ex:Scientist_463 ;
+    schema:isPartOf ex:Journal_6 .
+
+ex:Article_9 a schema:ScholarlyArticle ;
+    schema:name "Un Souvenir de Solférino (Report)" ;
+    schema:datePublished "1862-11-08"^^xsd:date ;
+    schema:author ex:Scientist_462 ;
+    schema:isPartOf ex:Journal_7 .
