@@ -32,21 +32,33 @@ function formatToolCatalogForPrompt(toolCatalog) {
         .map((tool) => {
             const requiredParams = (tool.params || [])
                 .filter((param) => param.required)
-                .map((param) => `${param.name}${param.schema?.type ? ` (${param.schema.type})` : ""}`);
+                .map(
+                    (param) =>
+                        `${param.name}${param.schema?.type ? ` (${param.schema.type})` : ""}`,
+                );
 
             //deoarece am modificat cativa parametri ca fiind optionali
             //a fost nevoie sa adaug o lista si pt parametrii optionali
             const optionalParams = (tool.params || [])
                 .filter((param) => !param.required)
-                .map((param) => `${param.name}${param.schema?.type ? ` (${param.schema.type})` : ""}`)
+                .map(
+                    (param) =>
+                        `${param.name}${param.schema?.type ? ` (${param.schema.type})` : ""}`,
+                );
             const mode = tool.name.startsWith("add") ? "write" : "read";
 
             return [
                 `- ${tool.name}`,
                 `  Mode: ${mode}`,
-                requiredParams.length ? `  Required fields: ${requiredParams.join(", ")}` : "  Required fields: none",
-                optionalParams.length ? `  Optional fields: ${optionalParams.join(", ")}` : ""
-            ].filter(Boolean).join("\n");
+                requiredParams.length
+                    ? `  Required fields: ${requiredParams.join(", ")}`
+                    : "  Required fields: none",
+                optionalParams.length
+                    ? `  Optional fields: ${optionalParams.join(", ")}`
+                    : "",
+            ]
+                .filter(Boolean)
+                .join("\n");
         })
         .join("\n");
 }
@@ -76,8 +88,12 @@ function pickDeclaredArguments(toolDefinition, args = {}) {
         return {};
     }
 
-    const declaredNames = new Set((toolDefinition.params || []).map((param) => param.name));
-    return Object.fromEntries(Object.entries(args).filter(([key]) => declaredNames.has(key)));
+    const declaredNames = new Set(
+        (toolDefinition.params || []).map((param) => param.name),
+    );
+    return Object.fromEntries(
+        Object.entries(args).filter(([key]) => declaredNames.has(key)),
+    );
 }
 
 function getMissingRequiredArguments(toolDefinition, args = {}) {
@@ -163,8 +179,14 @@ Examples:
         };
     }
 
-    const toolArguments = pickDeclaredArguments(toolDefinition, parsed.arguments || {});
-    const missingArguments = getMissingRequiredArguments(toolDefinition, toolArguments);
+    const toolArguments = pickDeclaredArguments(
+        toolDefinition,
+        parsed.arguments || {},
+    );
+    const missingArguments = getMissingRequiredArguments(
+        toolDefinition,
+        toolArguments,
+    );
 
     if (missingArguments.length > 0) {
         return {
@@ -181,7 +203,10 @@ Examples:
 
     const mcpResponse = await callMcpTool(parsed.tool, toolArguments);
 
-    if (mcpResponse.result?.success === false && Array.isArray(mcpResponse.result?.missing_arguments)) {
+    if (
+        mcpResponse.result?.success === false &&
+        Array.isArray(mcpResponse.result?.missing_arguments)
+    ) {
         return {
             tool: parsed.tool,
             arguments: toolArguments,
