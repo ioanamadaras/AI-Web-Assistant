@@ -1,200 +1,200 @@
 {
-  "events": [
-    {
-      "id": "1",
-      "name": "The Nobel Prize in Chemistry",
-      "startDate": "1903-11-12",
-      "location": "Stockholm"
-    },
-    {
-      "id": "2",
-      "name": "The Nobel Peace Prize",
-      "startDate": "1901-12-10",
-      "location": "Oslo"
-    },
-    {
-      "id": "3",
-      "name": "The Nobel Peace Prize",
-      "startDate": "1902-12-10",
-      "location": "Oslo"
-    },
-    {
-      "id": "4",
-      "name": "The Nobel Prize in Physics",
-      "startDate": "1902-11-11",
-      "location": "Stockholm"
-    },
-    {
-      "id": "5",
-      "name": "The Nobel Prize in Physics",
-      "startDate": "1903-11-12",
-      "location": "Stockholm"
-    },
-    {
-      "name": "Nobel Prize in Physics",
-      "startDate": "1901",
-      "location": "Stockholm",
-      "id": "lvRkF1TiRBw"
-    }
-  ],
-  "laureates": [
-    {
-      "id": "162",
-      "name": "Svante Arrhenius",
-      "nationality": "Swiss",
-      "birthDate": "1859-02-19",
-      "event_id": 1
-    },
-    {
-      "id": "462",
-      "name": "Henry Dunant",
-      "nationality": "Swiss",
-      "birthDate": "1828-05-08",
-      "event_id": 2
-    },
-    {
-      "id": "463",
-      "name": "Frédéric Passy",
-      "nationality": "French",
-      "birthDate": "1822-05-20",
-      "event_id": 2
-    },
-    {
-      "id": "464",
-      "name": "Élie Ducommun",
-      "nationality": "Swiss",
-      "birthDate": "1833-02-19",
-      "event_id": 3
-    },
-    {
-      "id": "465",
-      "name": "Albert Gobat",
-      "nationality": "Swiss",
-      "birthDate": "1843-05-21",
-      "event_id": 3
-    },
-    {
-      "id": "2",
-      "name": "Hendrik A. Lorentz",
-      "nationality": "Dutch",
-      "birthDate": "1853-07-18",
-      "event_id": 4
-    },
-    {
-      "id": "3",
-      "name": "Pieter Zeeman",
-      "nationality": "Dutch",
-      "birthDate": "1865-05-25",
-      "event_id": 4
-    },
-    {
-      "id": "4",
-      "name": "Henri Becquerel",
-      "nationality": "French",
-      "birthDate": "1852-12-15",
-      "event_id": 5
-    },
-    {
-      "id": "5",
-      "name": "Pierre Curie",
-      "nationality": "French",
-      "birthDate": "1859-05-15",
-      "event_id": 5
-    },
-    {
-      "id": "6",
-      "name": "Marie Curie",
-      "nationality": "Polish",
-      "birthDate": "1867-11-07",
-      "event_id": 5
-    }
-  ],
-  "institutions": [
-    {
-      "id": "1",
-      "name": "University of Cambridge",
-      "country": "UK",
-      "foundedYear": 1209
-    },
-    {
-      "id": "2",
-      "name": "Pasteur Institute",
-      "country": "France",
-      "foundedYear": 1887
-    },
-    {
-      "id": "3",
-      "name": "Stockholm University",
-      "country": "Sweden",
-      "foundedYear": 1878
-    },
-    {
-      "id": "4",
-      "name": "International Committee of the Red Cross",
-      "country": "Switzerland",
-      "foundedYear": 1863
-    },
-    {
-      "id": "5",
-      "name": "International Peace Bureau",
-      "country": "Switzerland",
-      "foundedYear": 1891
-    },
-    {
-      "id": "6",
-      "name": "Inter-Parliamentary Union",
-      "country": "France",
-      "foundedYear": 1889
-    },
-    {
-      "id": "7",
-      "name": "Leiden University",
-      "country": "Netherlands",
-      "foundedYear": 1575
-    }
-  ],
-  "scientists": [
-    {
-      "id": "6",
-      "name": "Marie Curie",
-      "fieldOfStudy": "Radioactivity",
-      "institution_id": 2
-    },
-    {
-      "id": "162",
-      "name": "Svante Arrhenius",
-      "fieldOfStudy": "Physical Chemistry",
-      "institution_id": 3
-    },
-    {
-      "id": "462",
-      "name": "Henry Dunant",
-      "fieldOfStudy": "Humanitarian Work",
-      "institution_id": 4
-    },
-    {
-      "id": "463",
-      "name": "Frédéric Passy",
-      "fieldOfStudy": "Peace Advocacy",
-      "institution_id": 6
-    },
-    {
-      "id": "464",
-      "name": "Élie Ducommun",
-      "fieldOfStudy": "Peace Administration",
-      "institution_id": 5
-    },
-    {
-      "id": "465",
-      "name": "Albert Gobat",
-      "fieldOfStudy": "Peace Administration",
-      "institution_id": 5
-    },
-    {
-      "id": "2",
-      "name": "Hendrik A. Lorentz",
-      "fieldOfStudy": "Theoretical Physics",
-      "institution_id": 7
-    }
-  ]
+    "events": [
+        {
+            "id": "1",
+            "name": "The Nobel Prize in Chemistry",
+            "startDate": "1903-11-12",
+            "location": "Stockholm"
+        },
+        {
+            "id": "2",
+            "name": "The Nobel Peace Prize",
+            "startDate": "1901-12-10",
+            "location": "Oslo"
+        },
+        {
+            "id": "3",
+            "name": "The Nobel Peace Prize",
+            "startDate": "1902-12-10",
+            "location": "Oslo"
+        },
+        {
+            "id": "4",
+            "name": "The Nobel Prize in Physics",
+            "startDate": "1902-11-11",
+            "location": "Stockholm"
+        },
+        {
+            "id": "5",
+            "name": "The Nobel Prize in Physics",
+            "startDate": "1903-11-12",
+            "location": "Stockholm"
+        },
+        {
+            "name": "Nobel Prize in Physics",
+            "startDate": "1901",
+            "location": "Stockholm",
+            "id": "lvRkF1TiRBw"
+        }
+    ],
+    "laureates": [
+        {
+            "id": "162",
+            "name": "Svante Arrhenius",
+            "nationality": "Swiss",
+            "birthDate": "1859-02-19",
+            "event_id": 1
+        },
+        {
+            "id": "462",
+            "name": "Henry Dunant",
+            "nationality": "Swiss",
+            "birthDate": "1828-05-08",
+            "event_id": 2
+        },
+        {
+            "id": "463",
+            "name": "Frédéric Passy",
+            "nationality": "French",
+            "birthDate": "1822-05-20",
+            "event_id": 2
+        },
+        {
+            "id": "464",
+            "name": "Élie Ducommun",
+            "nationality": "Swiss",
+            "birthDate": "1833-02-19",
+            "event_id": 3
+        },
+        {
+            "id": "465",
+            "name": "Albert Gobat",
+            "nationality": "Swiss",
+            "birthDate": "1843-05-21",
+            "event_id": 3
+        },
+        {
+            "id": "2",
+            "name": "Hendrik A. Lorentz",
+            "nationality": "Dutch",
+            "birthDate": "1853-07-18",
+            "event_id": 4
+        },
+        {
+            "id": "3",
+            "name": "Pieter Zeeman",
+            "nationality": "Dutch",
+            "birthDate": "1865-05-25",
+            "event_id": 4
+        },
+        {
+            "id": "4",
+            "name": "Henri Becquerel",
+            "nationality": "French",
+            "birthDate": "1852-12-15",
+            "event_id": 5
+        },
+        {
+            "id": "5",
+            "name": "Pierre Curie",
+            "nationality": "French",
+            "birthDate": "1859-05-15",
+            "event_id": 5
+        },
+        {
+            "id": "6",
+            "name": "Marie Curie",
+            "nationality": "Polish",
+            "birthDate": "1867-11-07",
+            "event_id": 5
+        }
+    ],
+    "institutions": [
+        {
+            "id": "1",
+            "name": "University of Cambridge",
+            "country": "UK",
+            "foundedYear": 1209
+        },
+        {
+            "id": "2",
+            "name": "Pasteur Institute",
+            "country": "France",
+            "foundedYear": 1887
+        },
+        {
+            "id": "3",
+            "name": "Stockholm University",
+            "country": "Sweden",
+            "foundedYear": 1878
+        },
+        {
+            "id": "4",
+            "name": "International Committee of the Red Cross",
+            "country": "Switzerland",
+            "foundedYear": 1863
+        },
+        {
+            "id": "5",
+            "name": "International Peace Bureau",
+            "country": "Switzerland",
+            "foundedYear": 1891
+        },
+        {
+            "id": "6",
+            "name": "Inter-Parliamentary Union",
+            "country": "France",
+            "foundedYear": 1889
+        },
+        {
+            "id": "7",
+            "name": "Leiden University",
+            "country": "Netherlands",
+            "foundedYear": 1575
+        }
+    ],
+    "scientists": [
+        {
+            "id": "6",
+            "name": "Marie Curie",
+            "fieldOfStudy": "Radioactivity",
+            "institution_id": 2
+        },
+        {
+            "id": "162",
+            "name": "Svante Arrhenius",
+            "fieldOfStudy": "Physical Chemistry",
+            "institution_id": 3
+        },
+        {
+            "id": "462",
+            "name": "Henry Dunant",
+            "fieldOfStudy": "Humanitarian Work",
+            "institution_id": 4
+        },
+        {
+            "id": "463",
+            "name": "Frédéric Passy",
+            "fieldOfStudy": "Peace Advocacy",
+            "institution_id": 6
+        },
+        {
+            "id": "464",
+            "name": "Élie Ducommun",
+            "fieldOfStudy": "Peace Administration",
+            "institution_id": 5
+        },
+        {
+            "id": "465",
+            "name": "Albert Gobat",
+            "fieldOfStudy": "Peace Administration",
+            "institution_id": 5
+        },
+        {
+            "id": "2",
+            "name": "Hendrik A. Lorentz",
+            "fieldOfStudy": "Theoretical Physics",
+            "institution_id": 7
+        }
+    ]
 }
